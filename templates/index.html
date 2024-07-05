@@ -1,0 +1,15 @@
+{% extends "base.html" %} {% block content %} {% for post in post %}
+{% comment %} <div>
+<h3><a href="{% url 'blog_detail' post.pk %}">{{ post.title }}</a></h3>
+</div> {% endcomment %}
+<div class="card text-center">
+  <div class="card-header">
+    C Programming
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{post.title}}</h5>
+    <a href="{% url 'blog_detail' post.pk %}" class="btn btn-primary">Read & Learn Now</a>
+  </div>
+  <div style="margin: 20px;"></div>
+</div>
+{% endfor %} {% endblock %}
